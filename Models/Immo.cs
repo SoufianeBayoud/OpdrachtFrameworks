@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OpdrachtFrameworks.Models
 {
@@ -21,5 +22,8 @@ namespace OpdrachtFrameworks.Models
         public string tuin { get; set; }
         public string type { get; set; }
         public bool diseappear { get; set; } = false;
+        [ForeignKey("id")]
+        public Klant? Klant { get; set; }
+
     }
 }
